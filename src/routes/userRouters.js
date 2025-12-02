@@ -1,11 +1,12 @@
 import express from "express";
 import {
-  createUser,
-  getAllUsers,
+  createUsers,
+  getUsers,
   getUserById,
   updateUser,
   deleteUser,
 } from "../controllers/userController.js";
+import { createUsers } from "../services/userService.js";
 
 const router = express.Router();
 
@@ -38,7 +39,7 @@ const router = express.Router();
  *             schema:
  *               $ref: '#/components/schemas/ErrorResponse'
  */
-router.post("/", createUser);
+router.post("/", createUsers);
 
 
 /**
@@ -51,7 +52,7 @@ router.post("/", createUser);
  *       200:
  *         description: List of all users
  */
-router.get("/", getAllUsers);
+router.get("/", getUsers);
 
 
 /**
