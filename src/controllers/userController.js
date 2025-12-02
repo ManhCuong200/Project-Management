@@ -41,7 +41,7 @@ export const updateUser = async (req, res) => {
   try {
     const user = await userService.updateUser(req.params.id, req.body);
     if (!user) {
-      return errorResponse(res, "User not updated");
+      return errorResponse(res, "User not found");
     }
     successResponse(res, "User updated successfully", user);
   } catch (error) {
@@ -53,7 +53,7 @@ export const deleteUser = async (req, res) => {
   try {
     const user = await userService.deleteUser(req.params.id);
     if (!user) {
-      return errorResponse(res, "User not deleted");
+      return errorResponse(res, "User not found");
     }
     successResponse(res, "User deleted successfully", user);
   } catch (error) {
