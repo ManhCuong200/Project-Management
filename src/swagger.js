@@ -12,6 +12,7 @@ const options = {
     servers: [
       {
         url: process.env.API_URL,
+        description: "Project Management API",
       },
     ],
     components: {
