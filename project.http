@@ -1,0 +1,10 @@
+GET http://localhost:3001/api/projects/All
+Content-Type: application/json
+
+{
+    "name": "Project 2",
+    "description": "This is project 2",
+    "startus": "2023-01-01",
+    "startDate": "active",
+    "owner": "652310000000000000000001"
+}
